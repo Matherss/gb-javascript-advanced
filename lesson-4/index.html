@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop</title>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.min.css" />
+  </head>
+  <body>
+    <header>
+     
+      <div class="container"> 
+        <div class="logo">eShop</div>
+       <button class="cart-button" type="button">Корзина</button>
+      
+    </div>
+    </header>
+    <div class="search"><div class="container"> <input placeholder="Введите название товара" type="text" class="goods-search" />
+      <button class="search-button" type="button">Искать</button></div></div>
+    <div id="fullprice"></div>
+    <div id="fullprice-2"></div>
+    <div class="cart displayWhite" style="display:none"></div>
+    <main>
+      <div class="goods-list"></div>
+    </main>
+    <section class="regexp">
+      <div class="regexp-container">
+      <button class="replace-button cart-button" type="button">Заменить ' на "</button><br>
+      <textarea class="text-for-replace" rows="5" cols="50">
+'Lorem ipsum', dolor sit 'amet' consectetur adipisicing elit. 'Itaque tempora aperiam dolores eum minima, doloribus atque doesn't aren't wasn't ducimus molestiae iusto accusamus.'</textarea
+      >
+      <div class="form">
+        <form action="#">
+          <h3>Форма обратной связи</h3>
+          <label for="name">ФИО</label><br />
+          <input id="name" name="name" placeholder="Введите своё ФИО" /><span class="fail hidden name"
+            >Например: Иван Иванович Иванов</span
+          ><br />
+          <label for="phone">Телефон</label><br />
+          <input id="phone" name="phone" placeholder="Номер телефона" /><span class="fail hidden phone"
+            >Требуемый формат: 89998889999, +7(000)000-0000, 79261234567, +7 926 123 45 67, 8-926-123-45-67</span
+          ><br />
+          <label for="mail">E-mail</label><br />
+          <input id="mail" name="mail" placeholder="my-mail@mail.ru" /><span class="fail hidden mail"
+            >Некорректное значение e-mail!</span
+          ><br />
+          <label for="form-text">Текст</label><br />
+          <textarea class="form-text" rows="5" cols="50" placeholder="Текст сообщения"></textarea><br />
+          <input type="submit" />
+        </form>
+      </div></div>
+    </section>
+  </body>
+  </html>
+  
+</html>
