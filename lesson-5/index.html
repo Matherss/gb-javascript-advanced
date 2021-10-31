@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop</title>
+    
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.min.css" />
+  </head>
+  <body>
+    <div id="app">
+    <header>
+     
+      <div class="container"> 
+        <div class="logo">eShop</div>
+       <button class="cart-button" type="button" v-on:click="toggleCart">Корзина</button>
+      
+    </div>
+    </header>
+    <div class="search"><div class="container"> <input placeholder="Введите название товара" type="text" class="goods-search" v-model="searchLine" />
+      <button class="search-button" type="button" v-on:click="filterGoods">Искать</button></div></div>
+    <div id="fullprice"></div>
+    <div id="fullprice-2">В КОРЗИНЕ: Количество товаров: {{ cart.countGoods }} шт. Стоимость: {{ cart.amount }} $</div>
+    <div class="cart displayWhite" v-if="isVisibleCart">
+
+      <div class="cart-item" v-for="item in cart.contents" v-bind:data-id="`${item.id_product}`"><h2>Товар: {{ item.product_name }}</h2><p>Стоит: {{ item.price }}</p><hr>Идентификатор: {{ item.id_product }}<hr>Количество: {{ item.quantity }}</div>
+
+    </div>
+    <main>
+      <div class="goods-list">
+        <template v-if="filteredGoods.length">
+         <div class="goods-item" v-for="item in filteredGoods" v-bind:data-id="`${item.id_product}`">
+          <h3>{{ item.product_name }}</h3>
+          <p>{{ item.price }}</p>
+         </div>
+        </template>
+        <template v-else>
+          <h1>«Нет данных»</h1>
+        </template>
+      </div>
+    </main>
+  </div><script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></body>
+  </html>
+  
+</html>
