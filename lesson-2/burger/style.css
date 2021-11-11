@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  outline: none;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: #555;
+}
+select,
+button {
+  background-color: #323232;
+  padding: 5px;
+}
+select:hover {
+  background-color: #444444;
+}
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+button:hover {
+  border: 1px solid aliceblue;
+  cursor: pointer;
+}
+.topping-cont {
+  margin-top: 15px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label:before {
+  content: "\2714";
+  color: transparent;
+  display: inline-block;
+  border: 1px solid #111;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 22px;
+  margin: -5px 5px 0 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+label:hover {
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label:before {
+  color: aliceblue;
+  border-color: aliceblue;
+}
+h1 {
+  font-size: 34px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.end {
+  border: 1px dashed aliceblue;
+  text-align: center;
+  padding: 15px;
+}
+.calorie {
+  color: rgba(237, 72, 72);
+}
+.price {
+  color: rgb(107, 88, 228);
+}
+.calorie,
+.price {
+  text-shadow: 1px 1px 0.5px black;
+}

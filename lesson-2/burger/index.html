@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Burger</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="container center">
+        <h1>Burger</h1>
+
+        <div>
+          <form action="#" id="form">
+            <!-- Size -->
+            <div class="end">
+              <div>Select size</div>
+
+              <select class="form-control" id="size" name="size"></select>
+            </div>
+
+            <!-- Stuffing -->
+            <div class="end">
+              <div>Select stuffing</div>
+
+              <select
+                class="form-control"
+                id="stuffing"
+                name="stuffing"
+              ></select>
+            </div>
+            <!-- Toppings -->
+
+            <div id="topping"></div>
+
+            <!-- Totals -->
+            <div class="end">
+              <div class="calorie"></div>
+              <div class="price"></div>
+            </div>
+            <div class="end">
+              <button
+                type="button"
+                class="btn"
+                onclick="document.querySelector('button').insertAdjacentHTML('afterend','<br>Заказ оформлен');"
+              >
+                Заказать
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
