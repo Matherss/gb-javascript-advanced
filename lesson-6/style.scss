@@ -1,0 +1,192 @@
+$color-mainhead: #a8dadc;
+$color-brigh-blue: #457b9d;
+$color-header3: #e63946;
+$color-header2: #f1faee;
+@mixin font {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  @include font;
+}
+main {
+  width: 1140px;
+  margin: 0 auto;
+}
+header {
+  background-color: rgba(29, 53, 87, 0.3);
+}
+.container {
+  width: 1140px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart {
+  padding-top: 12px;
+}
+.displayWhite {
+  background-color: $color-mainhead;
+  color: $color-brigh-blue;
+  margin: 50px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  transition: all 2s;
+}
+
+.cart-button {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid $color-brigh-blue;
+  color: $color-brigh-blue;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.cart-button:hover {
+  border: 1px solid transparent;
+  color: $color-header2;
+  cursor: pointer;
+  background-color: $color-brigh-blue;
+}
+.goods-list {
+  display: flex;
+  justify-content: space-between;
+}
+.goods-item {
+  margin: 20px 0px 0px 0px;
+  border: 2px solid darken($color-brigh-blue, 10);
+  padding: 30px;
+  display: flex;
+  flex-grow: 0.2;
+  background-color: $color-brigh-blue;
+  flex-direction: column;
+}
+.goods-item h3 {
+  color: $color-header2;
+  font-size: 18px;
+}
+.goods-item p {
+  color: $color-mainhead;
+}
+.logo {
+  color: $color-brigh-blue;
+  font-weight: bold;
+}
+.item-photo {
+  width: 200px;
+  height: 200px;
+}
+#fullprice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-brigh-blue;
+  color: $color-header2;
+  height: 55px;
+}
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px;
+  background-color: $color-header2;
+  padding: 25px;
+  border-radius: 15px;
+}
+.cart-info {
+  background-color: $color-header2;
+  text-align: center;
+  padding: 20px;
+  border-radius: 30%;
+  color: $color-brigh-blue;
+  margin: 20px;
+}
+.added {
+  color: red;
+  background-color: blue;
+}
+#fullprice-2 {
+  text-align: center;
+  width: 100%;
+  background-color: $color-brigh-blue;
+  color: $color-header2;
+}
+.search {
+  width: 1140px;
+  margin: 10px auto;
+  .container {
+    justify-content: start;
+    input {
+      width: 300px;
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+}
+
+label {
+  padding-top: 15px;
+}
+
+h3 {
+  padding-top: 10px;
+}
+
+.err {
+  border: $color-header3;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.fail {
+  color: $color-header3;
+}
+.regexp {
+  background: $color-mainhead;
+  input,
+  textarea {
+    background: $color-brigh-blue;
+    color: $color-header2;
+  }
+  form input[type="submit"] {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $color-header2;
+    border: 1px solid $color-brigh-blue;
+    color: $color-brigh-blue;
+    transition: all 0.3s;
+    font-weight: bold;
+    &:hover {
+      border: 1px solid transparent;
+      color: $color-header2;
+      cursor: pointer;
+      background-color: $color-brigh-blue;
+    }
+  }
+}
+input::placeholder,
+textarea::placeholder {
+  color: $color-mainhead;
+}
+.regexp-container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 25px;
+}
+.replace-button {
+  margin-bottom: 10px;
+}
