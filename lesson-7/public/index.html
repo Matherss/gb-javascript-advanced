@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop</title>
+    
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.min.css" />
+  </head>
+  <body>
+    <div id="app">
+    <header>
+     
+      <div class="container"> 
+        <div class="logo">eShop</div>
+       <button class="cart-button" type="button" v-on:click="toggleCart">Корзина</button>
+      
+    </div>
+    </header>
+    <search v-on:search="onSearch"></search>
+      <template v-if="noerror">
+    <div id="fullprice"></div>
+    <div id="fullprice-2">В КОРЗИНЕ: Количество товаров: {{ cart.countGoods }} шт. Стоимость: {{ cart.amount }} $</div>
+    <cart :cart="cart" v-bind:visible="isVisibleCart"></cart>
+    <main>
+      <goods-list :goods="filteredGoods"></goods-list>
+    </template>
+    <template v-else><error v-bind:err_text="err_text"></error></template>
+
+    </main>
+  </div><script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></body>
+  </html>
+  
+</html>
